@@ -1,0 +1,8 @@
+compile the program:
+$ gcc [programName].c -o programName
+eg : $ gcc sampleProgram.c -o sampleProgram
+
+run the compiled binary :
+$ ./programName
+eg : $ ./sampleProgram
+
