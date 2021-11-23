@@ -5,7 +5,7 @@ select lib or exe
 to build project =>cmake_list file =rightclick=>> build 
 
 
---------- generate make files:(c/c++ makefile extension in vscode by Adriano)
+--------- generate make files:(c/c++ makefile extension in vscode by Adriano)[https://www.youtube.com/watch?v=whQQF4kVjPY]
 ctrl + shift + p ==> make init =>> c++ project
 
 
