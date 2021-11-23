@@ -1,0 +1,12 @@
+(ctrl shift p ) or cmd + p => cmake quick
+slect cmake list file 
+select lib or exe
+
+to build project =>cmake_list file =rightclick=>> build 
+
+
+--------- generate make files:
+ctrl + shift + p ==> make init =>> c++ project
+
+
+
