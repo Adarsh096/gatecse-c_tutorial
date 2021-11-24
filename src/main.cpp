@@ -3,7 +3,8 @@
 #include"./include/union_vs_structs.c"
 #include"./include/2_drawing_shapes.c"
 #include"./include/3_printf.c"
-
+#include"./include/4_user_input.c"
+#include"./include/5_formatted_strings.c"
 int main(){
     // union_vs_structs.cpp
     character hansolo;
@@ -19,5 +20,11 @@ int main(){
     //printf usage
     formatted_printing();
 
+    //user input:
+    // calculate_area();
+
+    // formatted string :
+    greet();
+    
     return 0;
 }
