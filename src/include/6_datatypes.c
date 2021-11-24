@@ -1,5 +1,9 @@
 #include<stdio.h>
-
+/*
+Additional links
+https://stackoverflow.com/questions/1669821/scanf-skips-every-other-while-loop-in-c
+https://www.tutorialspoint.com/gnu_debugger/gdb_commands.htm
+*/
 void calculator()
 {
     // constants --> defined by const keyword
@@ -32,7 +36,20 @@ void calculator()
     double distance_d;
     printf("Again, enter the distance in scientific notation : ");
     // following will work even if there is 'e' in input:
-    scanf("%lf",&distance_d); 
+    scanf("%lf%c",&distance_d,&c); 
     printf("you value is : %f\n",distance_d);
 
+    //Character datatype: Enclose them in single quotes.
+    // Requires 1 byte (8 bits)
+    // ASCII uses 7 bits from the right ie, total 128 charactes can be stored.
+    // The last bit is used for extended char sets.
+    char character = 'A';
+    printf("Enter a valid ASCII character : ");
+    scanf("%c",&character);
+    // each character has an integer equivalent :
+    printf("Your character is : %c\n",character);
+    printf("Decimal equivalent of it is : %i\n",int(character));
+
+    // boolean datatype:
+    bool truth_value = false;
 }
