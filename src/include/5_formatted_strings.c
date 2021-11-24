@@ -34,6 +34,8 @@ Finally just print it normally as would do for a string.
 
 printf(“%s”,s);
 
+GOTCHA !! 
+The \n is not captured by the 'c' variable in fact it has captured nothing. Try it yourself too...
 
 Final Code is :
 --------------

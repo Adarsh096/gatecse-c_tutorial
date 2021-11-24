@@ -5,6 +5,9 @@
 #include"./include/3_printf.c"
 #include"./include/4_user_input.c"
 #include"./include/5_formatted_strings.c"
+#include"./include/6_datatypes.c"
+#include"./include/7_scanf_gotcha.c"
+
 int main(){
     // union_vs_structs.cpp
     character hansolo;
@@ -24,7 +27,13 @@ int main(){
     // calculate_area();
 
     // formatted string :
-    greet();
-    
+    //greet();
+
+    //datatypes
+    calculator();
+
+    //scanf gotchas 
+    // reader();
+
     return 0;
 }
