@@ -8,7 +8,7 @@ https://en.cppreference.com/w/c/language/operator_precedence
 */
 void operatorCalc()
 {   
-    
+
     // Operator Precedence:
     /* NOTE : Read from top to bottom. Top ones have more precedence...
         +----------------+------------------------------------------+---------------+
@@ -52,6 +52,8 @@ void operatorCalc()
 
     //shift oeprator :
     // first << then >> 
+    int result_shift1 = 10 << 2 >>3;
+    printf("Shifting result : %d\n",result_shift1);
 
 
     // Arithmetic Operators :
