@@ -8,6 +8,9 @@
 #include"./include/6_datatypes.c"
 #include"./include/7_scanf_gotcha.c"
 #include"./include/8_operators.c"
+#include"./include/9_type_casting.c"
+#include"./include/10_math_library.c"
+#include"./include/11_switch_statement.c"
 
 int main(){
     // union_vs_structs.cpp
@@ -31,13 +34,22 @@ int main(){
     //greet();
 
     //datatypes
-    calculator();
+    // calculator();
 
     //scanf gotchas 
     // reader();
 
     // operators 
-    operatorCalc();
+    // operatorCalc();
+
+    // type casting 
+    // moulder();
+
+    // math library :
+    // math_calculator();
+
+    //switch statements
+    switch_up();
 
     return 0;
 }

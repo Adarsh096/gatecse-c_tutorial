@@ -57,7 +57,7 @@ void operatorCalc()
 
 
     // Arithmetic Operators :
-    // first + or - then * then / then % 
+    // first + or - then / then * then % 
     double result_arth1 = 3+4-5*2/4; // Integer calculation, truncates the decimal part Ans = 5
     double result_arth2 = 3+4-((5*2)/4); // Integer calculation, truncates the decimal part Ans = 5 should have been 4.5
     double result_arth3 = 3.0+4.0-((5.0*2.0)/4.0);
