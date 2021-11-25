@@ -7,6 +7,7 @@
 #include"./include/5_formatted_strings.c"
 #include"./include/6_datatypes.c"
 #include"./include/7_scanf_gotcha.c"
+#include"./include/8_operators.c"
 
 int main(){
     // union_vs_structs.cpp
@@ -34,6 +35,9 @@ int main(){
 
     //scanf gotchas 
     // reader();
+
+    // operators 
+    operatorCalc();
 
     return 0;
 }

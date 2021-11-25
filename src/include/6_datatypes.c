@@ -1,8 +1,10 @@
 #include<stdio.h>
+#include<stdbool.h> // for replacing _Bool with bool
 /*
 Additional links
 https://stackoverflow.com/questions/1669821/scanf-skips-every-other-while-loop-in-c
 https://www.tutorialspoint.com/gnu_debugger/gdb_commands.htm
+https://www.cplusplus.com/reference/cstdio/scanf/
 */
 void calculator()
 {
@@ -37,7 +39,7 @@ void calculator()
     printf("Again, enter the distance in scientific notation : ");
     // following will work even if there is 'e' in input:
     scanf("%lf%c",&distance_d,&c); 
-    printf("you value is : %f\n",distance_d);
+    printf("you value is : %f\nThe garbage value captured is %c",distance_d,c);
 
     //Character datatype: Enclose them in single quotes.
     // Requires 1 byte (8 bits)
@@ -49,7 +51,17 @@ void calculator()
     // each character has an integer equivalent :
     printf("Your character is : %c\n",character);
     printf("Decimal equivalent of it is : %i\n",int(character));
+    printf("Decimal equivalent of it is : %i\n",character);
+
+    // Integer to ASCII
+    int ascii_dec;
+    printf("Enter a number between 0 to 127 : ");
+    scanf("%d",&ascii_dec);
+    printf("Ascii equivalent is : %c\n",ascii_dec);
+
 
     // boolean datatype:
-    bool truth_value = false;
+    bool truth_value = false; // C++ alias of _Bool allows for bool, true,false keywords.
+    _Bool truth_value2 = 0; // C language boolean datatype takes non zero as true and zero as false
+    
 }
