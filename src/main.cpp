@@ -12,7 +12,8 @@
 #include"./include/10_math_library.c"
 #include"./include/11_switch_statement.c"
 #include"./include/12_loops.c"
-#include"./include/13_pointers.c"
+#include"./include/13_pointers_a.c"
+#include"./include/14_pointers_b.c"
 
 int main(){
     // union_vs_structs.cpp
@@ -57,8 +58,11 @@ int main(){
     // looper();
 
     //pointers
-    swap_value();
+    // swap_value();
 
+    // pointer_b
+    // pointer_init();
+    pointer_arithm();
 
     return 0;
 }
