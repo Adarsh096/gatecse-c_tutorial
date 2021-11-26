@@ -11,6 +11,8 @@
 #include"./include/9_type_casting.c"
 #include"./include/10_math_library.c"
 #include"./include/11_switch_statement.c"
+#include"./include/12_loops.c"
+#include"./include/13_pointers.c"
 
 int main(){
     // union_vs_structs.cpp
@@ -49,7 +51,14 @@ int main(){
     // math_calculator();
 
     //switch statements
-    switch_up();
+    // switch_up();
+
+    //loops 
+    // looper();
+
+    //pointers
+    swap_value();
+
 
     return 0;
 }

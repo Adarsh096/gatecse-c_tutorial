@@ -22,7 +22,7 @@ void reader()
     // then we have an alternative of using fflush() :
     
     // fflush(stdin); // works but unreliable
-
+    // getchar(); // use this to reliably capture single character.
     
     double weight=0.0;
     printf("Now enter your weight in kg : ");
