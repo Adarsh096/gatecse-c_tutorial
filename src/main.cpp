@@ -14,6 +14,7 @@
 #include"./include/12_loops.c"
 #include"./include/13_pointers_a.c"
 #include"./include/14_pointers_b.c"
+#include"./include/15_pointers_c.c"
 
 int main(){
     // union_vs_structs.cpp
@@ -62,7 +63,8 @@ int main(){
 
     // pointer_b
     // pointer_init();
-    pointer_arithm();
+    // pointer_arithm();
+    nd_array_pointer();
 
     return 0;
 }

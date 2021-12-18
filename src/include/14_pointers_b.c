@@ -1,9 +1,55 @@
 #include<stdio.h>
 
+/*
+Additional References :
+https://www.geeksforgeeks.org/how-to-find-size-of-array-in-cc-without-using-sizeof-operator/
+https://www.youtube.com/watch?v=zuegQmMdy8M
+*/
+
+void display(char *c)
+{   int i = 0;
+    while(c[i]!='\0')
+    {
+        printf("%c",c[i]);
+        i++;
+    }
+    printf("\n");
+    // OR 
+    while(*c != '\0')
+    {
+        printf("%c",*c);
+        c++; // moving the pointer to next element
+    }
+    printf("\n");
+}
+void readonly_display(const char *c)
+{   // here we can not alter the array which is pointed by the pointer c:
+    while(*c != '\0')
+    {
+        printf("%c",*c);
+        c++; // moving the pointer to next element
+    }
+    printf("\n");
+}
 // define the method at the top to use in the functions below (Restriction of c)
 void increment(int *p) 
 {
     *p = *p + 1;
+}
+
+//NOTE : We pass the size of the array to any function because we can not calculate the size inside the function.
+int sumElements(int arr[], int len)
+{
+    int sum=0;
+    int size = sizeof(arr)/sizeof(arr[0]);
+    // this will give wrong value because we get reference to the array instead of the actual array ...
+    printf("size of array calculated inside the function is : %d\n"+size); 
+
+    for(int i=0;i<len; i++)
+    {
+        sum += arr[i];
+    }
+    return sum;
 }
 
 void pointer_init()
@@ -63,9 +109,68 @@ void pointer_arithm()
     increment(&count); // pass address to the pointer argument
     printf("count = %d\n",count);
 
+    // arrays and pointers:
+    printf("--------arrays and pointers-----------\n");
+    int array1[] = {1,2,3,7,4,5,9,6};
+    int *p_array1 = array1; // no need for the & sign
+    
+    // For an array 'array' with pointer "p_array' :
+    //NOTE : Address of an element at index i ==> &array[i] or (array+i) or (p_array+i)
+    //NOTE : Vlaue at an index i in an array ==> array[i] or *(p_array+i) or *(array+i)
+    // The address of the first element in the array is called the Base address. Obtained simply as =array;
 
+    printf("Address of first element : %d\n",array1);
+    printf("Address of first element : %d\n",&array1[0]);
+    printf("Value of first element : %d\n",*array1);
+    printf("Value of first element : %d\n",array1[0]);
 
+    //Size of array calculation
+    // using pointers
+    int array1_sz = *(&array1 + 1)-array1;
+    // using sizeof operator :
+    int array1_size = sizeof(array1)/sizeof(array1[0]);
 
+    printf("Size of array1 is : %d\n",array1_sz);
+    printf("Size of array1 is : %d\n\n",array1_size);
+
+    for(int i=0; i<array1_sz; i++)
+    {
+        printf("Address of %dth element : %d\n",i,array1);
+        printf("Address of %dth element : %d\n",i,&array1[i]);
+        printf("Value of %dth element : %d\n",i,*array1);
+        printf("Value of %dth element : %d\n",i,array1[i]);
+    }
+    // Interesting Fact :
+    // array1++ is invalid
+    // p_array1++ is valid
+
+    // arrays as function arguments :
+    int sum = sumElements(array1,array1_sz);
+    printf("Sum of all elements is : %d\n",sum);
+
+    //character arrays or strings in C :
+    //NOTE : All the strings in c should be null terminated 
+    //and thus the character arrays should be of length one character more than the string we want to store.
+
+    char str1[5] = "JOHN";
+    char *p_str1;
+    p_str1 = str1;
+    printf("string is : %s\n",p_str1);
+    printf("Character at index 3 : %c\n",*(str1+3));
+    printf("Character at index 3 : %c\n",*(p_str1+3));
+    printf("Character at index 3 : %c\n",str1[3]);
+    display(p_str1);
+    readonly_display(p_str1);
+    // Character Pointer Gotcha's 
+    char *p_str_const = "Hello"; // This is a compile time constant
+    // uncomment the following to see the error
+    // p_str_const[1] = 'E'; // this will give error during runtime...
+    printf("%s\n",p_str_const);
+
+    //The following is the way to declare the mutable strings...
+    char *p_str2 = str1; 
+    p_str2[1] = 'E'; // this will not give error during runtime...
+    printf("%s\n",p_str2);
 
 }
 
